@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn {
+      display: flex;
+      flex-direction: row;
+      padding: 15px;
+      background-color: rgb(53, 146, 233);
+      border: 10px rgb(4, 35, 63);
+      border-radius: 20px;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      transition: all 0.1s;
+    }
+    .btn:active {
+      background-color: rgb(24, 120, 209);
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+    .btn-svg1,
+    .btn-svg2 {
+      display: none;
+      margin-left: 5px;
+    }
+
+    .visible {
+      display: block;
+    }
+    #chat {
+      width: 500px;
+      min-height: 300px;
+      padding: 10px;
+      border: 1px solid rgb(23, 133, 235);
+      border-radius: 20px;
+    }
+    #messages{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #messages p:nth-of-type(even){
+     text-align: right; 
+      
+    }
+  </style>
+</head>
+<body>
+<p> Ex1</p> 
+<button class="btn"> Exercise 1
+    <div class="btn-svg1 visible">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-left-circle" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-5.904-2.854a.5.5 0 1 1 .707.708L6.707 9.95h2.768a.5.5 0 1 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.475a.5.5 0 1 1 1 0v2.768l4.096-4.097z"/>
+    </svg>
+  </div>
+  <div class="btn-svg2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-left-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-5.904-2.803a.5.5 0 1 1 .707.707L6.707 10h2.768a.5.5 0 0 1 0 1H5.5a.5.5 0 0 1-.5-.5V6.525a.5.5 0 0 1 1 0v2.768l4.096-4.096z"/>
+    </svg>
+  </div>
+</button>
+<br>
+<p>Ex2</p>
+<button class="btn screen-size">Show screen size</button>
+<p>Ex 3</p>
+<div id="chat">
+  
+  <label for="message"></label>
+  <input type="text" id="message">
+  <button type="submit" class="submit">Отправить</button>
+  <button class="geolocation">Геолокация</button>
+  <div id="messages"></div>
+</div>
+<script src="ex1.js"></script>
+<script src="ex2.js"></script>
+<script src="ex3.js"></script>
+</body>
+</html>
